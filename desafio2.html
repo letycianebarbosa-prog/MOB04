@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 - Seletor de Tamanho de Pizza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .resultado {
+            border: 1px solid #999;
+            padding: 10px;
+            margin-top: 10px;
+            width: fit-content;
+        }
+
+        .broto {
+            background-color: lightgreen;
+        }
+
+        .media {
+            background-color: lightblue;
+        }
+
+        .grande {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tamanho da Pizza</h2>
+    
+    <select id="tamanho" onchange="trocarTamanho()">
+        <option value="" disabled selected>Selecione um tamanho</option>
+        <option value="broto">Pizza Broto</option>
+        <option value="media">Pizza Média</option>
+        <option value="grande">Pizza Grande</option>
+    </select>
+
+    <div id="resultado" class="resultado">Escolha um tamanho</div>
+
+    <script>
+        function trocarTamanho() {
+            let valor = document.getElementById("tamanho").value;
+            let divResultado = document.getElementById("resultado");
+
+            if (valor === "broto") {
+                divResultado.innerText = "Broto: R$ 20,00";
+                divResultado.className = "resultado broto";
+            } else if (valor === "media") {
+                divResultado.innerText = "Média: R$ 30,00";
+                divResultado.className = "resultado media";
+            } else if (valor === "grande") {
+                divResultado.innerText = "Grande: R$ 40,00";
+                divResultado.className = "resultado grande";
+            }
+        }
+    </script>
+
+</body>
+</html>

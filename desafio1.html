@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Pedido Rápido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #7010b1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🍕 Pedido Rápido</h2>
+    <input type="text" id="nomeCliente" placeholder="Digite seu nome">
+    <button onclick="confirmarPedido()">Confirmar</button>
+    <p id="mensagem"></p>
+
+    <script>
+        function confirmarPedido() {
+            let nome = document.getElementById("nomeCliente").value;
+            document.getElementById("mensagem").innerText = "Pedido confirmado para: " + nome + "!";
+        }
+    </script>
+
+</body>
+</html>
